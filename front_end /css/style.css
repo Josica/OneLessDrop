@@ -1,0 +1,15 @@
+body{
+	font-family: 'Varela Round';
+	color: black;
+}
+h1.title{
+	color:#6ECCD6;
+}
+input.form-control{
+	width:25%;
+	border-color:#6ECCD6;
+}
+
+/*input.form-control.submit{
+	width: 13%
+}*/
