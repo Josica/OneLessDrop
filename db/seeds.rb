@@ -27,13 +27,11 @@ user2 = User.create!({
 
 type1 = Type.create!({
   :title => "Bath",
-  :value => 25
-  })
+  :value => 25})
 
 type2 = Type.create!({
     :title => "Shower",
-    :value => 19
-    })
+    :value => 19})
 
 question1 = Question.create!({
   :title => "How long do you usually take to bathe?"
@@ -44,11 +42,11 @@ question1 = Question.create!({
     })
 
   ans1 = Answer.create!({
-    :result => 30
-    :question_id => question1.id
-    })
+    :result => 30,
+    :question_id => question1.id,
+    :user_id => user1.id})
 
   ans2 = Answer.create!({
-      :result => 15
-      :question_id => question2.id
-      })
+      :result => 15,
+      :question_id => question2.id,
+      :user_id => user1.id})

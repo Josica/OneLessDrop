@@ -1,4 +1,4 @@
 class Type < ActiveRecord::Base
-  validates :type, :value , presence: true
-  
+  validates :title, :value , presence: true
+
 end
