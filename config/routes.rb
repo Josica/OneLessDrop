@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  root 'homepages#show'
+
+  resources :users
+  resources :types, only: [:index, :show]
+  resources :questions, only: [:index, :show]
+  resources :answers, only: [:index, :show, :create, :new]
+  resources :averages, only: [:index, :show]
+
+  get '/' => 'homepages#show', as: 'homepages'
+  get '/session/login', to: 'session#login', as:'login'
+  post '/session/login', to: 'session#create'
+  get '/session/logout', to: 'session#destroy', as: 'logout'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
